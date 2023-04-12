@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+body{background-color : yellow; 
+}
+</style>
+</head>
+   <body>
+   <H1>Предсказание вида Ириса</H1><br>
+      <form action = "{{ url_for('predict')}}" method = "POST" 
+         enctype = "multipart/form-data">
+	      <title>Предсказание вида Ириса</title>
+         <div class="form-group  purple-border">
+				  <label for="comment">Длина лепестка(см.):</label>
+				  <textarea class="form-control" rows="2" id="query1" name="query1" rows="2" cols="5" autofocus>{{query1}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Ширина лепестка(см.):</label>
+				  <textarea class="form-control" rows="2" id="query2" name="query2" rows="2" cols="5" autofocus>{{query2}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Длина чашелистика(см.):</label>
+				  <textarea class="form-control" rows="2" id="query3" name="query3" rows="2" cols="5" autofocus>{{query3}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Ширина чашелистика(см.):</label>
+				  <textarea class="form-control" rows="2" id="query4" name="query4" rows="2" cols="5" autofocus>{{query4}}</textarea>
+			</div>
+         <div class="col-sm-3">
+			<button type="submit" class="btn btn-primary" name="submit">Предсказать вид Ириса</button>
+			</div>
+         <br>
+         <textarea class="form-control" rows="2" id="comment" name="query5" rows="2" cols="5" autofocus>{{output1}}</textarea>
+      </form>   
+   </body>
+</html>
